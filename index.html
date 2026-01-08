@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
     <title>Formulari guai</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -18,23 +18,45 @@
         <legend>Dades personals</legend>
 
         <label for="nombre">Nom:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí">
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="El teu nom"
+            required
+        >
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Tu email aquí">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="exemple@email.com"
+            required
+        >
 
         <label for="telefono">Telèfon:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="+34 555 55 55 55">
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="+34 555 55 55 55"
+        >
 
         <label for="pass">Contrasenya:</label>
-        <input type="password" id="pass" name="password">
+        <input
+            type="password"
+            id="pass"
+            name="password"
+            required
+        >
     </fieldset>
 
     <fieldset>
         <legend>Dades del curs</legend>
 
         <label for="modalidad">Modalitat:</label>
-        <select id="modalidad" name="modalidad">
+        <select id="modalidad" name="modalidad" required>
             <option value="">Selecciona una opció</option>
             <option value="online">Online</option>
             <option value="mixto">Mixt</option>
@@ -42,36 +64,80 @@
         </select>
 
         <label for="comentarios">Comentaris:</label>
-        <textarea id="comentarios" name="comentarios" rows="5" placeholder="Explica'ns les teves necessitats"></textarea>
+        <textarea
+            id="comentarios"
+            name="comentarios"
+            rows="5"
+            placeholder="Explica'ns les teves necessitats"
+        ></textarea>
     </fieldset>
 
     <fieldset>
         <legend>Preferències</legend>
 
-        <p>Turn:</p>
+        <p>Turn preferit:</p>
+
         <label for="turno-mañana">
-            <input type="radio" id="turno-mañana" name="turno" value="mañana"> Matí
+            <input
+                type="radio"
+                id="turno-mañana"
+                name="turno"
+                value="mañana"
+                required
+            >
+            Matí
         </label>
 
         <label for="turno-mediodia">
-            <input type="radio" id="turno-mediodia" name="turno" value="mediodia"> Migdia
+            <input
+                type="radio"
+                id="turno-mediodia"
+                name="turno"
+                value="mediodia"
+            >
+            Migdia
         </label>
 
         <label for="turno-tarde">
-            <input type="radio" id="turno-tarde" name="turno" value="tarde"> Tarda
+            <input
+                type="radio"
+                id="turno-tarde"
+                name="turno"
+                value="tarde"
+            >
+            Tarda
         </label>
 
         <p>Interessos:</p>
+
         <label for="html">
-            <input type="checkbox" id="html" name="intereses[]" value="HTML"> HTML
+            <input
+                type="checkbox"
+                id="html"
+                name="intereses[]"
+                value="HTML"
+            >
+            HTML
         </label>
 
         <label for="css">
-            <input type="checkbox" id="css" name="intereses[]" value="CSS"> CSS
+            <input
+                type="checkbox"
+                id="css"
+                name="intereses[]"
+                value="CSS"
+            >
+            CSS
         </label>
 
         <label for="js">
-            <input type="checkbox" id="js" name="intereses[]" value="JS"> JavaScript
+            <input
+                type="checkbox"
+                id="js"
+                name="intereses[]"
+                value="JS"
+            >
+            JavaScript
         </label>
     </fieldset>
 
