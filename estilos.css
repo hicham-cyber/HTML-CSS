@@ -1,7 +1,7 @@
 body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    color: #918787;
+    color: #333333; /* Contrast correcte */
     margin: 20px;
 }
 
@@ -9,45 +9,55 @@ header {
     background-color: rgb(27, 116, 104);
     text-align: center;
     padding: 10px;
+    color: white; /* Text visible sobre fons fosc */
 }
 
 form {
-    background-color: white;
+    background-color: #ffffff;
     padding: 15px;
-    border: 1px solid gray;
+    border: 1px solid #666666;
 }
 
 fieldset {
     margin-bottom: 15px;
     padding: 10px;
+    border: 1px solid #999999;
 }
 
 legend {
     font-weight: bold;
+    color: #000000;
 }
 
 label {
     display: block;
     margin-top: 10px;
+    font-weight: bold;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     display: block;
     margin-top: 5px;
     margin-bottom: 10px;
     padding: 5px;
     width: 95%;
     max-width: 400px;
+    border: 1px solid #666666;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 button {
-    background-color: lightblue;
+    background-color: #1b7468;
+    color: #ffffff;
     border: none;
     padding: 8px 15px;
-   
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: rgb(50, 68, 74);
-    color: white;
+    background-color: #34444a;
+    color: #ffffff;
 }
