@@ -1,74 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Formularios molones</title>
+    <title>Formulari guai</title>
 </head>
 
 <body>
-    <header>
-        <h1>Formulari guai</h1>
-    </header>
-    <form action="" method="">
-        <!-- aquí irán todos los campos del formulario -->
-         <fieldset>
-            <legend>Datos personales:</legend>
-            <label for="nombre">Nombre:</label>
-            <input id="nombre" type="text" placeholder="Tu nombre aquí">
+<header>
+    <h1>Formulari guai</h1>
+</header>
 
-            <label for="email">Email</label>
-            <input type="email" name="" id="email" placeholder="Tu email aquí">
+<form action="#" method="post">
 
-            <label for="telefono">Telefono</label>
-            <input type="tel" name="" id="telefono" placeholder="+34 555 55 55 55">
-            
-            <label for="pass">Contrasenya</label>
-            <input type="password" name="" id="pass">
-        <fieldset>
-        <fieldset>
-            <legend>Datos del curso</legend>
-            <label for="Modalidad">Modalidad:</label>
-            <select name="" id="modalidad">
-                <option value="">Selecciona un a opción</option>
-                <option value="online">online</option>
-                <option value="mixto">mixto</option>
-                <option value="presencial">presencial</option>
-            </select>
+    <fieldset>
+        <legend>Dades personals</legend>
 
-            <label for="comentarios">Tus comentarios:</label>
-            <textarea name="" id="comentarios" rows="20" cols="40" placeholder="Cuentanos tus necesidades"></textarea>
-        </fieldset>
+        <label for="nombre">Nom:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí">
 
-        <fieldset>
-            <legend>Horror</legend>
-            <p>Preferencia de turno:</p>
-            <label for="turno">
-                <input type="radio" name="" id="turno" value="mañana">Mañana
-            </label> 
-            <label for="turno">
-                <input type="radio" name="" id="turno" value="Mediodia">Mediodia
-            </label>
-             <label for="turno">
-                <input type="radio" name="" id="turno" value="Tarde">Tarde
-            </label>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Tu email aquí">
 
-            <p>Tus intereses:<p>
-                <label for="intereses">
-                    <input type="checkbox" name="" id="intereses" value="HTML">HTML
-                </label>
-                <label for="intereses">
-                    <input type="checkbox" name="" id="intereses" value="CSS">CSS
-                </label>
-                <label for="intereses">
-                    <input type="checkbox" name="" id="intereses" value="JS">JS
-                </label>
-         
-        </fieldset>
-        <button>Enviar</button>
-    </form>
+        <label for="telefono">Telèfon:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+34 555 55 55 55">
+
+        <label for="pass">Contrasenya:</label>
+        <input type="password" id="pass" name="password">
+    </fieldset>
+
+    <fieldset>
+        <legend>Dades del curs</legend>
+
+        <label for="modalidad">Modalitat:</label>
+        <select id="modalidad" name="modalidad">
+            <option value="">Selecciona una opció</option>
+            <option value="online">Online</option>
+            <option value="mixto">Mixt</option>
+            <option value="presencial">Presencial</option>
+        </select>
+
+        <label for="comentarios">Comentaris:</label>
+        <textarea id="comentarios" name="comentarios" rows="5" placeholder="Explica'ns les teves necessitats"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferències</legend>
+
+        <p>Turn:</p>
+        <label for="turno-mañana">
+            <input type="radio" id="turno-mañana" name="turno" value="mañana"> Matí
+        </label>
+
+        <label for="turno-mediodia">
+            <input type="radio" id="turno-mediodia" name="turno" value="mediodia"> Migdia
+        </label>
+
+        <label for="turno-tarde">
+            <input type="radio" id="turno-tarde" name="turno" value="tarde"> Tarda
+        </label>
+
+        <p>Interessos:</p>
+        <label for="html">
+            <input type="checkbox" id="html" name="intereses[]" value="HTML"> HTML
+        </label>
+
+        <label for="css">
+            <input type="checkbox" id="css" name="intereses[]" value="CSS"> CSS
+        </label>
+
+        <label for="js">
+            <input type="checkbox" id="js" name="intereses[]" value="JS"> JavaScript
+        </label>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+</form>
 </body>
-
 </html>
