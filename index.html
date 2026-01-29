@@ -1,148 +1,50 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulari guai</title>
+    <title>Gestor de partido</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
+
 <header>
-    <h1>Formulari guai</h1>
+    <h1>Gestor de partido</h1>
 </header>
 
-<form action="#" method="post">
+<main>
+    <!-- Marcador del partido -->
+    <section>
+        <h2>Marcador</h2>
+        <div class="marcador">
+            <div>
+                <h3>Equip A</h3>
+                <p id="puntsA">0</p>
+                <button id="sumarA">+1</button>
+            </div>
+            <div>
+                <h3>Equip B</h3>
+                <p id="puntsB">0</p>
+                <button id="sumarB">+1</button>
+            </div>
+        </div>
+        <button id="resetMarcador">Reiniciar marcador</button>
+        <p id="mensajeMarcador" aria-live="polite"></p>
+    </section>
 
-    <fieldset>
-        <legend>Dades personals</legend>
+    <!-- Lista de jugadores -->
+    <section>
+        <h2>Jugadors</h2>
+        <form id="formJugador" novalidate>
+            <label for="inputJugador">Nombre del jugador</label>
+            <input type="text" id="inputJugador" required>
+            <button type="submit">Añadir jugador</button>
+        </form>
+        <ul id="listaJugadors" aria-live="polite"></ul>
+        <p class="mensajes"></p>
+    </section>
+</main>
 
-        <label for="nombre">Nom:</label>
-        <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="El teu nom"
-            required
-        >
-
-        <label for="email">Email:</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="exemple@email.com"
-            required
-        >
-
-        <label for="telefono">Telèfon:</label>
-        <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="+34 555 55 55 55"
-        >
-
-        <label for="pass">Contrasenya:</label>
-        <input
-            type="password"
-            id="pass"
-            name="password"
-            required
-        >
-    </fieldset>
-
-    <fieldset>
-        <legend>Dades del curs</legend>
-
-        <label for="modalidad">Modalitat:</label>
-        <select id="modalidad" name="modalidad" required>
-            <option value="">Selecciona una opció</option>
-            <option value="online">Online</option>
-            <option value="mixto">Mixt</option>
-            <option value="presencial">Presencial</option>
-        </select>
-
-        <label for="comentarios">Comentaris:</label>
-        <textarea
-            id="comentarios"
-            name="comentarios"
-            rows="5"
-            placeholder="Explica'ns les teves necessitats"
-        ></textarea>
-    </fieldset>
-
-    <fieldset>
-        <legend>Preferències</legend>
-
-        <p>Turn preferit:</p>
-
-        <label for="turno-mañana">
-            <input
-                type="radio"
-                id="turno-mañana"
-                name="turno"
-                value="mañana"
-                required
-            >
-            Matí
-        </label>
-
-        <label for="turno-mediodia">
-            <input
-                type="radio"
-                id="turno-mediodia"
-                name="turno"
-                value="mediodia"
-            >
-            Migdia
-        </label>
-
-        <label for="turno-tarde">
-            <input
-                type="radio"
-                id="turno-tarde"
-                name="turno"
-                value="tarde"
-            >
-            Tarda
-        </label>
-
-        <p>Interessos:</p>
-
-        <label for="html">
-            <input
-                type="checkbox"
-                id="html"
-                name="intereses[]"
-                value="HTML"
-            >
-            HTML
-        </label>
-
-        <label for="css">
-            <input
-                type="checkbox"
-                id="css"
-                name="intereses[]"
-                value="CSS"
-            >
-            CSS
-        </label>
-
-        <label for="js">
-            <input
-                type="checkbox"
-                id="js"
-                name="intereses[]"
-                value="JS"
-            >
-            JavaScript
-        </label>
-    </fieldset>
-
-    <button type="submit">Enviar</button>
-
-</form>
+<script src="gestor.js"></script>
 </body>
 </html>
