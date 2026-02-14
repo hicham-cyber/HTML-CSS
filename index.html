@@ -1,50 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de partido</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estils.css">
+    <title>Formulario web validado</title>
 </head>
+
 <body>
+    <h1>Registro para el Taller</h1>
+    <p>Completa el formulario para inscribirte en este taller.</p>
 
-<header>
-    <h1>Gestor de partido</h1>
-</header>
-
-<main>
-    <!-- Marcador del partido -->
-    <section>
-        <h2>Marcador</h2>
-        <div class="marcador">
-            <div>
-                <h3>Equip A</h3>
-                <p id="puntsA">0</p>
-                <button id="sumarA">+1</button>
-            </div>
-            <div>
-                <h3>Equip B</h3>
-                <p id="puntsB">0</p>
-                <button id="sumarB">+1</button>
-            </div>
+    <form id="registroForm" novalidate>
+        <div>
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: Juan Pérez">
+            <span class="error" id="errorNombre"></span>
         </div>
-        <button id="resetMarcador">Reiniciar marcador</button>
-        <p id="mensajeMarcador" aria-live="polite"></p>
-    </section>
 
-    <!-- Lista de jugadores -->
-    <section>
-        <h2>Jugadors</h2>
-        <form id="formJugador" novalidate>
-            <label for="inputJugador">Nombre del jugador</label>
-            <input type="text" id="inputJugador" required>
-            <button type="submit">Añadir jugador</button>
-        </form>
-        <ul id="listaJugadors" aria-live="polite"></ul>
-        <p class="mensajes"></p>
-    </section>
-</main>
+        <br>
+        <div>
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@email.com">
+            <span class="error" id="errorEmail"></span>
+        </div>
 
-<script src="gestor.js"></script>
+        <br>
+        <div>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" required min="16" max="99">
+            <span class="error" id="errorEdad"></span>
+        </div>
+
+        <br>
+        <div>
+            <label for="fecha">Fecha del taller:</label><br>
+            <input type="date" id="fecha" name="fecha" required>
+            <span class="error" id="errorFecha"></span>
+        </div>
+
+        <br>
+        <div>
+            <label for="tipo">Tipo de asistencia:</label><br>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="presencial">Presencial</option>
+                <option value="online">Online</option>
+            </select>
+            <span class="error" id="errorTipo"></span>
+        </div>
+
+        <br>
+        <div>
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" maxlength="200"
+                placeholder="Escribe aquí si tienes alguna duda"></textarea>
+        </div>
+
+        <br>
+        <div>
+            <input type="checkbox" id="condiciones" name="condiciones" required>
+            <label for="condiciones">Acepto las normas del taller y todas sus condiciones.</label>
+            <span class="error" id="errorCondiciones"></span>
+        </div>
+
+        <br>
+
+        <button type="submit">Enviar</button>
+
+        <p id="mensajeFinal"></p>
+
+    </form>
+
+    <script src="formularioweb.js"></script>
 </body>
+
 </html>
