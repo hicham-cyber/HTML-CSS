@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de partido</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>Gestor de partido</h1>
+</header>
+
+<main>
+    <!-- Marcador del partido -->
+    <section>
+        <h2>Marcador</h2>
+        <div class="marcador">
+            <div>
+                <h3>Equip A</h3>
+                <p id="puntsA">0</p>
+                <button id="sumarA">+1</button>
+            </div>
+            <div>
+                <h3>Equip B</h3>
+                <p id="puntsB">0</p>
+                <button id="sumarB">+1</button>
+            </div>
+        </div>
+        <button id="resetMarcador">Reiniciar marcador</button>
+        <p id="mensajeMarcador" aria-live="polite"></p>
+    </section>
+
+    <!-- Lista de jugadores -->
+    <section>
+        <h2>Jugadors</h2>
+        <form id="formJugador" novalidate>
+            <label for="inputJugador">Nombre del jugador</label>
+            <input type="text" id="inputJugador" required>
+            <button type="submit">Añadir jugador</button>
+        </form>
+        <ul id="listaJugadors" aria-live="polite"></ul>
+        <p class="mensajes"></p>
+    </section>
+</main>
+
+<script src="gestor.js"></script>
+</body>
+</html>
